@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" type="text/css" href="Css/sri.css">
+	<style type="text/css">
+		.mail-navigation{
+		height: 62px;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 2000;
+		backface-visibility: hidden;
+		box-shadow: 0 0 2px rgba(6,8,8,0.15);
+	}
+
+	</style>
+
+<head>
+	<title>Blog</title>
+</head>
+	<body>
+		<header class="mail-navigation" id="site-header">	
+			<div id="pageheader">		
+				<a href="#" class="freddie"></a>			
+			</div>		
+
+			<div class="navigation">
+				<nav class="site-nav">
+					<a class="nav-link" href="Sri.html">About</a>
+					<a class="nav-link" href="resume.html">Resume</a>
+					<a class="nav-link" href="blog.html">Blog</a>
+					<a class="nav-link" href="Contact.html">Contact</a>					
+				</nav>
+
+				<nav class="action-nav">
+					<a class="btn-small" href="">Sign Up Free</a>
+					<a class="nav-login nav-link" href="">Log In</a>				
+				</nav>
+
+			</div>
+		</header>
+
+		<div class="grid-wrapper hero-banner hero-banner--contact-us">
+			<div class="grid">
+				<div class="grid__cell grid__cell--centered">
+					<h1 class="hero-banner__title">Get in touch</h1>				
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="Sri.html">Srihari</a>
+						on Mar 10, 2016
+					</p>
+					<h1>
+						<a href="#">How to execute scripts on Sauce Labs</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+							Sauce Labs is an online provider of cross-platform testing. It offers Selenium testing, mobile testing, and JS unit testing on over 500 OS/browser platforms.
+
+							This article will focus on cross-platform testing a web application.
+
+							Regardless of whether it’s close to a release or during each development iteration, it’s good practice to assess how your application behaves on different platforms. For a web application, this means testing it on a wide variety of OS/browser version as possible. For example, let’s say you want to support your website on Internet Explorer 11, Safari 8, and Google Chrome and Firefox versions</p>
+
+							<p>&nbsp;</p> 
+
+						<p>	private final String USERNAME = ""; <br>
+							private final String ACCESS_KEY = ""; <br>
+							private final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub"; <br>
+
+							capabilities = DesiredCapabilities.chrome(); <br>
+							capabilities.setCapability("platform", "Windows 8"); <br>
+							capabilities.setCapability("version", "44.0"); <br>
+							capabilities.setCapability("name", name); <br>
+
+							try { <br>
+									driver = new RemoteWebDriver(new URL(URL), capabilities); <br>
+								} catch (MalformedURLException e) { <br>
+									e.printStackTrace(); <br>
+							} <br>
+						</p>					
+					</div>
+					<div class="row mt4">				
+					</div>
+				</article>
+				<div class="hr mtb12 span3of4 centered">				
+				</div>		
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="">Srihari</a>
+						on Mar 11, 2016
+					</p>
+					<h1>
+						<a href="#">How to execute scripts on Sauce Labs</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+							private final String USERNAME = ""; <br>
+							private final String ACCESS_KEY = ""; <br>
+							private final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub"; <br>
+
+							capabilities = DesiredCapabilities.chrome(); <br>
+							capabilities.setCapability("platform", "Windows 8"); <br>
+							capabilities.setCapability("version", "44.0"); <br>
+							capabilities.setCapability("name", name); <br>
+
+							try { <br>
+									driver = new RemoteWebDriver(new URL(URL), capabilities); <br>
+								} catch (MalformedURLException e) { <br>
+									e.printStackTrace(); <br>
+							} <br>
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">											
+						</div>
+						
+					</div>
+				</article>
+				<div class="hr mtb12 span3of4 centered">				
+				</div>		
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="">Srihari</a>
+						on Mar 11, 2015
+					</p>
+					<h1>
+						<a href="#">Internet Explorer - Switch to Frame and Windows</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+							Issue: unable to switch to frames and windows in Internet Explorer 11 <br>
+
+							Solution: <br>
+
+							Download and install the IE Webdriver tool for internet explorer from the below link<br>
+
+							https://www.microsoft.com/en-us/download/details.aspx?id=44069<br>
+
+							public String switchToWindow(String title) {<br>
+
+							try {<br>
+									if (prevWindow == null || prevWindow != title) {<br>
+									prevWindow = driver.getTitle();<br>
+									prevWindowHandle = driver.getWindowHandle();<br>
+								}<br>
+									return getHandleByTitle(title);<br>
+									} catch (Exception e) {<br>
+
+								}<br>
+
+							return null;<br>
+							}<br>
+
+							private String getHandleByTitle(String title) {<br>
+							String currentHandle = driver.getWindowHandle();<br>
+								for (String handle : driver.getWindowHandles()) {<br>
+									if (title.equals(driver.switchTo().window<br>
+										(handle).getTitle())) {<br>
+										return handle;<br>
+										}<br>
+									}<br>
+										return currentHandle;<br>
+								}<br>
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">
+						<!-- 	<a class="more" href="#">Read More</a> -->						
+						</div>
+						
+					</div>
+				</article>
+				<div class="hr mtb12 span3of4 centered">				
+				</div>		
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="">Srihari</a>
+						on Mar 11, 2015
+					</p>
+					<h1>
+						<a href="#">SauceLabs - Upload a file using file dectector</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+							private final String USERNAME = ""; <br>
+							private final String ACCESS_KEY = "";<br>
+							private final String URL = "http://" + USERNAME + ":" + ACCESS_KEY + "@ondemand.saucelabs.com:80/wd/hub";<br>
+
+							capabilities = DesiredCapabilities.chrome();<br>
+							capabilities.setCapability("platform", "Windows 8");<br>
+							capabilities.setCapability("version", "44.0");<br>
+							capabilities.setCapability("name", name);<br>
+							try {<br>
+							driver = new RemoteWebDriver(new URL(URL), capabilities);((RemoteWebDriver)<br>driver).setFileDetector(new LocalFileDetector());<br>
+							} catch (MalformedURLException e) {<br>
+							e.printStackTrace();<br>
+							}<br>
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">
+							<!-- <a class="more" href="#">Read More</a>	 -->					
+						</div>
+						
+					</div>
+				</article>
+				<div class="hr mtb12 span3of4 centered">				
+				</div>		
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="">Srihari</a>
+						on Mar 11, 2015
+					</p>
+					<h1>
+						<a href="#">Selenium - validate the unix data using Java</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+							public void unixdataverification(String command)<br>
+							{<br>
+								String hostname = ""; <br>
+								String username = ""; <br>
+								String password = "";<br>
+
+							try {<br>
+
+								Writer output = null;<br>
+
+								Connection conn = new Connection(hostname); <br>
+								conn.connect();<br>
+
+								boolean isAuthenticated = conn.authenticateWithPassword(username, password); <br>
+								if (isAuthenticated == false) <br>
+								throw new IOException("Authentication failed.");<br>
+
+								Session sess = conn.openSession(); <br>
+								sess.execCommand(command);<br>
+
+								InputStream stdout = new StreamGobbler(sess.getStdout()); <br>
+								BufferedReader br = new BufferedReader(new InputStreamReader(stdout));<br>
+
+								while (true) <br>
+								{ <br>
+									String line = br.readLine();<br>
+
+									System.out.println(line);<br>
+
+									File file = new File("..\\write.txt");<br>
+									output = new BufferedWriter(new FileWriter(file));<br>
+									output.write(line);<br>
+									output.close();<br>
+
+									break; <br>
+								} 
+								/* Show exit status, if available (otherwise "null") */ <br>
+								System.out.println("ExitCode: " + sess.getExitStatus()); <br>
+								/* Close this session */ <br>
+								sess.close(); /* Close the connection */ <br>
+								conn.close();<br>
+							} catch (IOException e) {<br>
+								// TODO Auto-generated catch block<br>
+								e.printStackTrace();<br>
+							} <br>
+							}<br>
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">
+							<!-- <a class="more" href="#">Read More</a>	 -->					
+						</div>
+						
+					</div>
+				</article>
+				<div class="hr mtb12 span3of4 centered">				
+				</div>		
+			</div>
+
+			<hr>
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="">Srihari</a>
+						on Mar 11, 2015
+					</p>
+					<h1>
+						<a href="#">Click Button issues with Selenium Webdriver</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+
+							public void clickElement(WebElement Element){<br>
+
+							JavascriptExecutor executor = (JavascriptExecutor) driver;<br>
+							executor.executeScript("var elem=arguments[0]; setTimeout(function() {elem.click();}, 100)", Element);<br>
+
+							}<br>
+
+							public void clickelement(WebElement Element){<br>
+
+							JavascriptExecutor executor = (JavascriptExecutor) driver;<br>
+							executor.executeScript("arguments[0].click();", Element);<br>
+
+							}<br>
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">
+							<!-- <a class="more" href="#">Read More</a>	 -->					
+						</div>						
+					</div>
+				</article>
+				<div class="hr mtb12 span3of4 centered">	
+					<div class="col span1of2 large-span1of2 middle">
+						<a href="blog_1.html" class="btn-small">Older Posts</a>
+						
+					</div>			
+				</div>		
+			</div>
+		</div>
+
+		<footer class="copyright">
+			<div class="content">
+				<a class="footer-logo" href="#"><img src="images/Sig.png"></a>
+			</div>			
+		</footer>
+
+		<section class="hide_overflow" id="home">
+			<a class="go_btn" href="">
+				Test Automation Blog
+				<span class="hide_below_large">: Srihari Innamuri</span>
+			</a>	
+		</section>
+	</body>
+</html>

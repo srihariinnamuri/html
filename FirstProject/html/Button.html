@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Button Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <h2>Button Styles</h2>
+  <button type="button" class="btn btn-default">Default</button>
+  <button type="button" class="btn btn-primary">Primary</button>
+  <button type="button" class="btn btn-success">Success</button>
+  <button type="button" class="btn btn-info">Info</button>
+  <button type="button" class="btn btn-warning">Warning</button>
+  <button type="button" class="btn btn-danger">Danger</button>
+  <button type="button" class="btn btn-link">Link</button>      
+</div>
+
+<div class="container">
+  <h2>Button Tags</h2>
+  <a href="#" class="btn btn-info" role="button">Link Button</a>
+  <button type="button" class="btn btn-info">Button</button>
+  <input type="button" class="btn btn-info" value="Input Button">
+  <input type="submit" class="btn btn-info" value="Submit Button">
+</div>
+
+<div class="container">
+  <h2>Button Sizes</h2>
+  <button type="button" class="btn btn-primary btn-lg">Large</button>
+  <button type="button" class="btn btn-primary btn-md">Medium</button>    
+  <button type="button" class="btn btn-primary btn-sm">Small</button>
+  <button type="button" class="btn btn-primary btn-xs">XSmall</button>
+</div>
+
+<div class="container">
+  <h2>Block Level Buttons</h2>
+  <button type="button" class="btn btn-primary btn-block">Button 1</button>
+  <button type="button" class="btn btn-default btn-block">Button 2</button>
+
+  <h2>Large Block Level Buttons</h2>
+  <button type="button" class="btn btn-primary btn-lg btn-block">Button 1</button>
+  <button type="button" class="btn btn-default btn-lg btn-block">Button 2</button>
+
+  <h2>Small Block Level Buttons</h2>
+  <button type="button" class="btn btn-primary btn-sm btn-block">Button 1</button>
+  <button type="button" class="btn btn-default btn-sm btn-block">Button 2</button>
+</div>
+
+<div class="container">
+  <h2>Button States</h2>
+  <button type="button" class="btn btn-primary">Primary Button</button>
+  <button type="button" class="btn btn-primary active">Active Primary</button>
+  <button type="button" class="btn btn-primary disabled">Disabled Primary</button>
+</div>
+
+<div class="container">
+  <h2>Button Group</h2>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <button type="button" class="btn btn-primary">Sony</button>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Button Groups - Set Sizes</h2>
+  <p>Add class .btn-group-* to size all buttons in a button group.</p>
+  <h3>Large Buttons:</h3>
+  <div class="btn-group btn-group-lg">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <button type="button" class="btn btn-primary">Sony</button>
+  </div>
+  <h3>Extra Small Buttons:</h3>
+  <div class="btn-group btn-group-xs">
+    <button type="button" class="btn btn-primary">Apple</button>
+    <button type="button" class="btn btn-primary">Samsung</button>
+    <button type="button" class="btn btn-primary">Sony</button>
+  </div>
+</div>
+
+
+<div class="container">
+  <h2>Split Buttons</h2>
+  <div class="btn-group">
+    <button type="button" class="btn btn-primary">Sony</button>
+    <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown">
+      <span class="caret"></span>
+    </button>
+    <ul class="dropdown-menu" role="menu">
+      <li><a href="#">Tablet</a></li>
+      <li><a href="#">Smartphone</a></li>
+    </ul>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Glyphicon Examples</h2>
+  <p>Envelope icon: <span class="glyphicon glyphicon-envelope"></span></p>    
+  <p>Envelope icon as a link:
+    <a href="#"><span class="glyphicon glyphicon-envelope"></span></a>
+  </p>
+  <p>Search icon: <span class="glyphicon glyphicon-search"></span></p>
+  <p>Search icon on a button:
+    <button type="button" class="btn btn-default">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>
+  </p>
+  <p>Search icon on a styled button:
+    <button type="button" class="btn btn-info">
+      <span class="glyphicon glyphicon-search"></span> Search
+    </button>
+  </p>
+  <p>Print icon: <span class="glyphicon glyphicon-print"></span></p>      
+  <p>Print icon on a styled link button:
+    <a href="#" class="btn btn-success btn-lg">
+      <span class="glyphicon glyphicon-print"></span> Print 
+    </a>
+  </p> 
+</div>
+
+<div class="container">
+  <h2>Badges</h2>
+  <a href="#">News <span class="badge">5</span></a><br>
+  <a href="#">Comments <span class="badge">10</span></a><br>
+  <a href="#">Updates <span class="badge">2</span></a>
+</div>
+
+<div class="container">
+  <h2>Badges on Buttons</h2>
+  <button type="button" class="btn btn-primary">Primary <span class="badge">7</span></button>
+  <button type="button" class="btn btn-success">Success <span class="badge">3</span></button>    
+  <button type="button" class="btn btn-danger">Danger <span class="badge">5</span></button>        
+</div>
+
+<div class="container">
+  <h2>Labels</h2>
+  <h1>Example <span class="label label-default">New</span></h1>
+  <h2>Example <span class="label label-default">New</span></h2>
+  <h3>Example <span class="label label-default">New</span></h3>
+  <h4>Example <span class="label label-default">New</span></h4>
+  <h5>Example <span class="label label-default">New</span></h5>
+  <h6>Example <span class="label label-default">New</span></h6>
+</div>
+
+<div class="container">
+  <h2>Contextual Label Classes</h2>
+  <p>Contextual classes can be used to color the label.</p>  
+  <span class="label label-default">Default Label</span>
+  <span class="label label-primary">Primary Label</span>
+  <span class="label label-success">Success Label</span>
+  <span class="label label-info">Info Label</span>
+  <span class="label label-warning">Warning Label</span>
+  <span class="label label-danger">Danger Label</span>
+</div>
+
+<div class="container">
+  <h2>Colored Progress Bars</h2>
+  <p>The contextual classes colors the progress bars:</p> 
+  <div class="progress">
+    <div class="progress-bar progress-bar-success" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      40% Complete (success)
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-info" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+      50% Complete (info)
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-warning" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+      60% Complete (warning)
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-danger" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      70% Complete (danger)
+    </div>
+  </div>
+</div>
+
+
+<div class="container">
+  <h2>Striped Progress Bars</h2>
+  <p>The .progress-bar-striped class adds stripes to the progress bars:</p> 
+  <div class="progress">
+    <div class="progress-bar progress-bar-success progress-bar-striped" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      40% Complete (success)
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-info progress-bar-striped" role="progressbar" aria-valuenow="50" aria-valuemin="0" aria-valuemax="100" style="width:50%">
+      50% Complete (info)
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-warning progress-bar-striped" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width:60%">
+      60% Complete (warning)
+    </div>
+  </div>
+  <div class="progress">
+    <div class="progress-bar progress-bar-danger progress-bar-striped" role="progressbar" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100" style="width:70%">
+      70% Complete (danger)
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Animated Progress Bar</h2>
+  <p>The .active class animates the progress bar:</p> 
+  <div class="progress">
+    <div class="progress-bar progress-bar-striped active" role="progressbar" aria-valuenow="40" aria-valuemin="0" aria-valuemax="100" style="width:40%">
+      40%
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Pagination - Active State</h2>
+  <p>Add class .active to let the user know which page he/she is on:</p>
+  <ul class="pagination">
+    <li><a href="#">1</a></li>
+    <li class="active"><a href="#">2</a></li>
+    <li><a href="#">3</a></li>
+    <li><a href="#">4</a></li>
+    <li><a href="#">5</a></li>
+  </ul>
+</div>
+
+<div class="container">
+  <h2>Breadcrumbs</h2>
+  <p>The .breadcrumb class indicates the current page's location within a navigational hierarchy:</p>                  
+  <ul class="breadcrumb">
+    <li><a href="#">Home</a></li>
+    <li><a href="#">Private</a></li>
+    <li><a href="#">Pictures</a></li>
+    <li class="active">Vacation</li>        
+  </ul>
+</div>
+
+<div class="container">
+  <h2>Pager</h2>
+  <p>The .pager class provides previous and next buttons (links):</p>                  
+  <ul class="pager">
+    <li><a href="#">Previous</a></li>
+    <li><a href="#">Next</a></li>
+  </ul>
+</div>
+
+<div class="container">
+  <h2>Pager</h2>
+  <p>The .previous and .next classes align each link to the sides of the page:</p>                  
+  <ul class="pager">
+    <li class="previous"><a href="#">Previous</a></li>
+    <li class="next"><a href="#">Next</a></li>
+  </ul>
+</div>
+
+<div class="container">
+  <h2>List Group With Custom Content</h2>
+  <div class="list-group">
+    <a href="#" class="list-group-item active">
+      <h4 class="list-group-item-heading">First List Group Item Heading</h4>
+      <p class="list-group-item-text">List Group Item Text</p>
+    </a>
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">Second List Group Item Heading</h4>
+      <p class="list-group-item-text">List Group Item Text</p>
+    </a>
+    <a href="#" class="list-group-item">
+      <h4 class="list-group-item-heading">Third List Group Item Heading</h4>
+      <p class="list-group-item-text">List Group Item Text</p>
+    </a>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Panel Group</h2>
+  <p>The panel-group class clears the bottom-margin. Try to remove the class and see what happens.</p>
+  <div class="panel-group">
+    <div class="panel panel-default">
+      <div class="panel-heading">Panel Header</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Panel Header</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
+    <div class="panel panel-default">
+      <div class="panel-heading">Panel Header</div>
+      <div class="panel-body">Panel Content</div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h2>Dropdowns</h2>
+  <p>The .dropdown class is used to indicate a dropdown menu.</p>
+  <p>Use the .dropdown-menu class to actually build the dropdown menu.</p>
+  <p>To open the dropdown menu, use a button or a link with a class of .dropdown-toggle and data-toggle="dropdown".</p>                                          
+  <div class="dropdown">
+    <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Dropdown Example
+    <span class="caret"></span></button>
+    <ul class="dropdown-menu">
+      <li><a href="#">HTML</a></li>
+      <li><a href="#">CSS</a></li>
+      <li><a href="#">JavaScript</a></li>
+    </ul>
+  </div>
+</div>
+
+
+</body>
+</html>

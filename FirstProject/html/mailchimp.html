@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+
+	#site-header{
+		height: 62px;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 2000;
+		backface-visibility: hidden;
+		box-shadow: 0 0 2px rgba(6,8,8,0.15);
+	}
+
+	.pageheader{
+		width: 10%;
+		min-width: 48px;
+		height: 100%;
+		max-width: 40px;
+		margin: 12px 0;
+		display: inline-block;
+		box-sizing: border-box;
+	}
+
+	.freddie{
+		width: 100%
+		height:100%;
+		display: block;
+		background: transparent url("images/freddie.svg") no-repeat center center
+	}
+
+	.navigation .site-nav{
+		width: 55%;
+		max-width: 840px;
+		text-align: left;
+		padding: 0px 120px;
+	}
+
+	.navigation .action-nav{
+		float: right;
+		text-align: right;
+		width: 45%;
+		padding: 0px ;
+	}
+
+	.navigation .site-nav,.navigation .action-nav{
+		display: inline-block;
+		vertical-align: top;
+		height: 100%;
+		box-sizing: border-box;
+	}
+
+	.nav-link{
+		position: relative;
+		font-size: 12px;
+		font-weight: bold;
+		letter-spacing: 0.04em;
+		color: #3a3a3a;
+		display: inline-block;
+		vertical-align: middle;		
+		box-sizing: border-box;
+		padding: 20px 18px;
+		line-height: 1.75;
+		font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+	}
+
+	a{
+		margin: 0;
+		border: 0;
+		background: transparent;
+		text-decoration: none;
+		padding: 0;
+		font-size: 100%;
+		color: #2c9ab7;
+	}
+
+	.btn-small,.btnprimary{
+		background: #e85c41;
+		font-size: 12px;
+		line-height: 1.75;
+		padding: 0.75em 1.5em;
+		color: #fff;
+		display: inline-block;
+		box-sizing: border-box;
+		position: relative;
+		border: 0;
+		font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+		font-weight: bold;
+		text-align: center;
+		letter-spacing: 0.02em;
+		text-decoration: none;
+		max-width: 100%;
+
+	}
+
+	#home{
+		background-color: #f2f2f2;
+		z-index: 1;
+		padding: o;
+		background-color: #fff;
+		position: relative;
+	}
+
+	body{
+		color: #3a3a3a;
+		background: #f9f9f9;
+	}
+
+	.go_btn{
+		position: fixed;
+		display: block;
+		left: 0;
+		bottom: 0;
+		width: 100%;
+		text-align: center;
+		font-family: "Graphik","Helvetica",Sans-serif;
+		color: #fff;
+		font-weight: 700;
+		font-style: italic;
+		background-color: #060808;
+		padding: 18px;
+		opacity: 1;		
+		z-index: 10;
+	}
+
+	.copyright{
+		font-size: 12px;
+		padding: 0;	
+		text-align: center;		
+	}
+
+	.content{
+		padding-bottom: 12px !important;
+		padding-top: 36px !important;
+		width: 90%;
+		max-width: 1008px;
+		margin-left: auto;
+		margin-right: auto;
+	}
+
+	.footer-logo{
+		text-align: center;
+		display: inline-block;
+		background-repeat: no-repeat;
+		background-position: top center;
+		width: 100%;
+		max-width: 150px;
+		background-size: contain;
+		height: 0;
+		padding-top: 42px;
+	}
+
+	html, span,div,p,footer,header{
+		margin: 0;
+		padding: 0;
+		border: 0;
+		outline: 0;
+		font-size: 100%;
+		vertical-align: baseline;
+		background: transparent;
+	}
+
+	.colophan{
+		padding-bottom: 12px !important;
+		padding-top: 12px !important;
+		text-align: center;
+	}
+
+
+	.home-wrapper{
+		position: relative;
+		z-index: 5;
+	}
+
+	.center{
+		text-align: center;
+	}
+
+	.page-title{
+		padding-top: 24px;
+		padding-bottom: 24px;
+		font-size: 40px;
+		font-family: "Helvetica Neue",Arial,Helvetica,sans-serif;
+		line-height: 1.2;
+		font-weight: bold;
+		max-width: 100%;		
+	}
+
+	.mb0{
+		margin-bottom: 0px !important;
+		text-align: left;
+		font-family: "Open Sans",Verdana,Arial,Helvetica,sans-serif;
+		font-size: 16px;
+		line-height: 1.6875;
+		font-weight: normal;
+	}
+
+	.pb4{
+		padding-bottom: 24px !important;		
+	}
+
+
+</style>
+<head>
+	<title></title>
+</head>
+<body>
+	<header class="mail-navigation" id="site-header">	
+		<div id="pageheader">		
+			<a href="#" class="freddie"></a>			
+		</div>		
+
+		<div class="navigation">
+			<nav class="site-nav">
+				<a class="nav-link" href="#">Features</a>
+				<a class="nav-link" href="#">Pricing</a>
+				<a class="nav-link" href="#">Support</a>
+				<a class="nav-link" href="#">Blog</a>
+				<a class="nav-link" href="#">More</a>
+			</nav>
+
+			<nav class="action-nav">
+				<a class="btn-small" href="">Sign Up Free</a>
+				<a class="nav-login nav-link" href="">Log In</a>				
+			</nav>
+		</div>
+	</header>
+
+	<div class="home-wrapper">
+		<div class="content center">
+			<div class="email">
+				<h1 class="page-title">Send Better Email</h1>
+			</div>
+			<div>
+				<img src="images/Capture.png">
+			</div>
+			<p class="align-left mb0">
+				Join more than 10 million people who use MailChimp <br> to design and send 600 million emails every day.
+			</p>
+			<div class="col span1of3 mid-span1of1 pb4">
+				<a href="#" class="btnprimary">Sign Up Free</a>
+			</div>
+
+		</div>
+	</div>
+
+<footer class="copyright">
+	<div class="content">
+		<a class="footer-logo" href="#"><img src="images/Sig.png"></a>
+	</div>
+
+	<div class="copyright-message">
+		<div class="content">
+			<P class="colophan">
+				©2001-2016 All Rights Reserved. MailChimp® is a registered trademark of The Rocket Science Group. 
+				<a href="#">Privacy</a>
+				and
+				<a href="#">Terms</a>
+
+			</P>
+		</div>
+
+		
+	</div>
+	
+</footer>
+
+<section class="hide_overflow" id="home">
+	<a class="go_btn" href="">
+		MailChimp Pro
+		<span class="hide_below_large">: Advanced email marketing for $199 / month</span>
+	</a>
+	
+</section>
+
+</body>
+</html>

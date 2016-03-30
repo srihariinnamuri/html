@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="Css/sri.css">
+	<style type="text/css">
+		.mail-navigation{
+		height: 62px;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 2000;
+		backface-visibility: hidden;
+		box-shadow: 0 0 2px rgba(6,8,8,0.15);
+	}
+
+	</style>
+<head>
+	<title>Blog</title>
+</head>
+	<body>
+		<header class="mail-navigation" id="site-header">	
+			<div id="pageheader">		
+				<a href="#" class="freddie"></a>			
+			</div>		
+
+			<div class="navigation">
+				<nav class="site-nav">
+					<a class="nav-link" href="Sri.html">About</a>
+					<a class="nav-link" href="resume.html">Resume</a>
+					<a class="nav-link" href="blog.html">Blog</a>
+					<a class="nav-link" href="Contact.html">Contact</a>					
+				</nav>
+			</div>
+		</header>
+
+		<div class="content">
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="">Srihari</a>
+						on Mar 11, 2015
+					</p>
+					<h1>
+						<a href="#">Click Button issues with Selenium Webdriver</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+
+							public void clickElement(WebElement Element){<br>
+
+							JavascriptExecutor executor = (JavascriptExecutor) driver;<br>
+							executor.executeScript("var elem=arguments[0]; setTimeout(function() {elem.click();}, 100)", Element);<br>
+
+							}<br>
+
+							public void clickelement(WebElement Element){<br>
+
+							JavascriptExecutor executor = (JavascriptExecutor) driver;<br>
+							executor.executeScript("arguments[0].click();", Element);<br>
+
+							}<br>
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">
+							<!-- <a class="more" href="#">Read More</a>	 -->					
+						</div>						
+					</div>
+				</article>	
+				<hr>				
+			</div>
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="">Srihari</a>
+						on Mar 11, 2015
+					</p>
+					<h1>
+						<a href="#">Soap Request by reading XML input file using Java</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+							// Create SOAP Connection<br>
+								SOAPConnectionFactory soapConnectionFactory = SOAPConnectionFactory.newInstance();<br>
+								SOAPConnection soapConnection = soapConnectionFactory.createConnection();<br>
+
+							// Send SOAP Message to SOAP Server<br>
+								String url = ";<br>
+								SOAPMessage soapResponse = soapConnection.call(createSOAPRequest(sFileName), url);<br>
+
+							//Read SOAP response<br>
+
+								String sAppNo=null;<br>
+								SOAPBody sBody = soapResponse.getSOAPBody();<br>
+								sAppNo = sBody.getElementsByTagName("").item(0).getTextContent();<br>
+							
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">
+							<!-- <a class="more" href="#">Read More</a>	 -->					
+						</div>						
+					</div>
+				</article>	
+				<hr>				
+			</div>
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="">Srihari</a>
+						on Mar 11, 2015
+					</p>
+					<h1>
+						<a href="#">Wait for any WebElement to disappear</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+							public boolean waitForElementToDisappear(final By locator, int timeoutSeconds) {<br>
+							boolean elementIsFound = true;<br>
+							int timeout = 0;<br>
+							do {<br>
+							try {<br>
+							WebElement element = se.driver().findElement(locator);<br>
+							if (element.isDisplayed() &amp;&amp; element.isEnabled()) //&amp;&amp; !element.getAttribute("style").contains("none")<br>
+							{<br>
+							se.util().sleep(1000);<br>
+							timeout++;<br>
+							} else<br>
+							elementIsFound = false;<br>
+							} catch (Exception e) {<br>
+							elementIsFound = false;<br>
+							}<br>
+							} while (elementIsFound && (timeout < timeoutSeconds));<br>
+
+							if (timeout == timeoutSeconds)<br>
+							return !elementIsFound;<br>
+							}<br>
+							
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">
+							<!-- <a class="more" href="#">Read More</a>	 -->					
+						</div>						
+					</div>
+				</article>	
+				<hr>				
+			</div>
+
+		</div>
+
+		<nav class="span3of4 centered">	
+					<div class="col span1of2 large-span1of2 middle">
+						<a href="blog.html" class="btn-small">Older Posts</a>						
+					</div>	
+					<div class="col span1of2 large-span1of2 align-right middle">
+						<a href="#" class="btn-small">Newer Posts</a>						
+					</div>		
+		</nav>	
+
+		<footer class="copyright">
+			<div class="content">
+				<a class="footer-logo" href="#"><img src="images/Sig.png"></a>
+			</div>			
+		</footer>
+
+		<section class="hide_overflow" id="home">
+			<a class="go_btn" href="">
+				Test Automation Blog
+				<span class="hide_below_large">: Srihari Innamuri</span>
+			</a>	
+		</section>
+	</body>
+</html>
