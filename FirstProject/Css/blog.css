@@ -44,6 +44,39 @@
 		vertical-align: top;
 	}
 
+	.space{
+		padding-left: 10px;		
+		display: block;
+		padding-bottom: 3px;
+	}
+
+	.header{		
+		font-weight: bold;
+		display: block;
+	}
+
+	.lit{
+		color: maroon;
+		font-weight: bold;
+	}
+
+	.capabilities{
+		padding: 30px;
+	}
+
+	.lang-html{
+		display: block;
+		color: #393318;
+	}
+
+	pre{
+		overflow: auto;
+		font-size: 12px;
+		padding: 2px;
+		width: auto;
+		background-color: #eee;
+	}
+
 
 </style>
 

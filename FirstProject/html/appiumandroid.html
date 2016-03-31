@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="../Css/sri.css">
+	<link rel="stylesheet" type="text/css" href="../Css/blog.css">
+	<style type="text/css">
+		.mail-navigation{
+		height: 62px;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 2000;
+		backface-visibility: hidden;
+		box-shadow: 0 0 2px rgba(6,8,8,0.15);
+	}
+
+	</style>
+<head>
+	<title>appiumandoid</title>
+</head>
+	<body>
+		<header class="mail-navigation" id="site-header">	
+			<div id="pageheader">		
+				<a href="#" class="freddie"></a>			
+			</div>		
+
+			<div class="navigation">
+				<nav class="site-nav">
+					<a class="nav-link" href="Sri.html">About</a>
+					<a class="nav-link" href="resume.html">Resume</a>
+					<a class="nav-link" href="appiumios.html">Blog</a>
+					<a class="nav-link" href="Contact.html">Contact</a>					
+				</nav>
+			</div>
+		</header>
+
+		<div class="grid-wrapper hero-banner hero-banner--contact-us">
+			<div class="grid">
+				<div class="grid__cell grid__cell--centered">
+					<h1 class="hero-banner__title">Get in touch</h1>				
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="Sri.html">Srihari</a>
+						on Mar 11, 2015
+					</p>
+					<h1>
+						<a href="#">Mobile Automation - Appium Android setup process</a>	
+					</h1>
+					<div class="normalize">
+						<p>
+
+							Appium is an open-source tool for automating native, mobile web, and hybrid applications on iOS and Android platforms.<br>
+							Appium is cross-platform: it allows you to write tests against multiple platforms (iOS, Android), using the same API. <br>
+							This enables code reuse between iOS and Android testsuites.<br></p>
+
+							<div class="head_image">
+								<span class="androidimage">
+									<img class="android_image" src="../images/appiumAndroid.png">
+								</span>
+							</div>
+														
+							<p>
+									<span class="header">Requirements:</span>									
+									<span class="space">1) Appium</span>
+									<span class="space">2) Android SDK</span>
+									<span class="space">3) Eclipse IDE</span>
+									<span class="space">4) Selenium and Appium Java Client JAR files</span>								
+
+									<span class="header">Android Setup:</span>
+									<span class="space">Step:1 Download Android SDK from <a href="http://developer.android.com">http://developer.android.com</a></span>
+									<span class="space">Step:2 Go to Develop => Tools => Download => Download ADT for Mac OS X</span>
+									<span class="space">Step:3 Install the ADT to Application folder. Install all emulators with SDK 17+</span>
+									<span class="space">Step:4 Open the ADT folder from Finder</span>
+									<span class="space">Step:5 Open Eclipse folder</span>
+									<span class="space">Step:6 Open the Eclipse.app program</span>
+									<span class="space">Step:7 Click the Window button from top bar</span>
+									<span class="space">Step:8 Click the Android SDK Managerbutton</span>
+									<span class="space">Step:9 Check all API’s 17+ and the Tools and Extras folders and install them</span>
+
+									<span class="header">Setup Bash-Profile:</span>
+									<span class="space">1) Open Terminal</span>
+									<span class="space">2) Enter $ vim .bash_profile</span>
+									<span class="space">3) Export ANDROID_HOME = (path to SDK folder)</span>
+									<span class="space">4) Export JAVA_HOME = SDK Path</span>
+
+									<span class="header">Setup Appium for Android:</span>
+									<span class="space">Check checkboxes and select a package in fron of:</span>
+									<span class="space">Package</span>
+									<span class="space">Wait for Package</span>
+									<span class="space">Launch Activity</span>
+									<span class="space">Wait for Activity</span>
+
+									<span class="header">Capabilities:</span>
+									<span class="space">Select Platform Name: Android</span>
+									<span class="space">Select Automation Name: Appium</span>
+									<span class="space">Select Platform Version: API 17+</span>
+
+									<span class="header">Launch Device:</span>
+									<span class="space">Check the checkbox in from of <span class="lit">Device Ready Timeout</span></span>
+									<span class="space">Set up <span class="lit">60</span> seconds to Device Ready Timeout</span>
+
+									<span class="header">If you use emulator:</span>
+									<span class="space">1) Check the checkbox in front of <span class="lit">Launch AVD</span> (the emulator device should already be created)</span>
+									<span class="space">2) In capabilities  – <span class="lit">Platform Version</span> select the AVD selected API (Android version)</span>
+
+									<span class="header">If you use real device:</span>
+									<span class="space">1) Check the checkbox in front of <span class="lit">Device Name</span></span>
+									<span class="space">2) Fill the <span class="lit">Device Name</span> field with device name which can be get from 
+												<span class="lit">Android File Transfer</span> application</span>
+									<span class="space">3) Check the checkbox in front of <span class="lit">Language</span></span>
+									<span class="space">4) Select devices language</span>
+									<span class="space">5) Launch the <span class="lit">Appium</span> app</span>
+									<span class="space">6) Verify if all settings are corrected by taping the <span class="lit">Doctor</span> button</span>
+									<span class="space">7) If all is correct tap the <span class="lit">Inspector</span> button to start recording the test.</span>
+
+									<span class="header">Appium Desired Capabilities for Android:</span>
+									<span class="space">capabilities = DesiredCapabilities.android();</span>
+									<span class="space">capabilities.setBrowserName(BrowserType.CHROME);</span>
+									<span class="space">capabilities.setCapability("platformName", platformName);</span>
+									<span class="space">capabilities.setCapability(CapabilityType.VERSION, platformVersion);</span>
+									<span class="space">capabilities.setCapability("deviceName", deviceName);</span>
+									<span class="space">driver = new AndroidDriver(new URL("http://localhost:4723/wd/hub"), capabilities);</span>						
+							
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">
+							<!-- <a class="more" href="#">Read More</a>	 -->					
+						</div>						
+					</div>
+				</article>	
+				<hr>				
+			</div>						
+
+		</div>
+
+		<nav class="span3of4 centered">	
+					<div class="col span1of2 large-span1of2 middle">
+						<a href="blog.html" class="btn-small">Older Posts</a>						
+					</div>	
+					<div class="col span1of2 large-span1of2 align-right middle">
+						<a href="appiumios.html" class="btn-small">Newer Posts</a>						
+					</div>		
+		</nav>	
+
+		<footer class="copyright">
+			<div class="content">
+				<a class="footer-logo" href="#"><img src="../images/Sig.png"></a>
+			</div>			
+		</footer>
+
+		<section class="hide_overflow" id="home">
+			<a class="go_btn" href="">
+				Test Automation Blog
+				<span class="hide_below_large">: Srihari Innamuri</span>
+			</a>	
+		</section>
+	</body>
+</html>
