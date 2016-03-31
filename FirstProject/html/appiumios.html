@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+	<link rel="stylesheet" type="text/css" href="../Css/sri.css">
+	<link rel="stylesheet" type="text/css" href="../Css/blog.css">
+	<style type="text/css">
+		.mail-navigation{
+		height: 62px;
+		overflow: hidden;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100%;
+		background-color: #fff;
+		z-index: 2000;
+		backface-visibility: hidden;
+		box-shadow: 0 0 2px rgba(6,8,8,0.15);
+	}
+
+	</style>
+<head>
+	<title>appiumios</title>
+</head>
+	<body>
+		<header class="mail-navigation" id="site-header">	
+			<div id="pageheader">		
+				<a href="#" class="freddie"></a>			
+			</div>		
+
+			<div class="navigation">
+				<nav class="site-nav">
+					<a class="nav-link" href="Sri.html">About</a>
+					<a class="nav-link" href="resume.html">Resume</a>
+					<a class="nav-link" href="blog.html">Blog</a>
+					<a class="nav-link" href="Contact.html">Contact</a>					
+				</nav>
+			</div>
+		</header>
+
+		<div class="grid-wrapper hero-banner hero-banner--contact-us">
+			<div class="grid">
+				<div class="grid__cell grid__cell--centered">
+					<h1 class="hero-banner__title">Get in touch</h1>				
+				</div>
+			</div>
+		</div>
+
+		<div class="content">
+
+			<div class="row">
+				<article class="article_short">
+					<p class="article_date">
+						posted by
+						<a href="Sri.html">Srihari</a>
+						on Mar 11, 2015
+					</p>
+					<h1>
+						<a href="#">Mobile Automation - Appium IOS setup process</a>	
+					</h1>
+					<div class="normalize">
+						<p>Appium is an open source, cross-platform test automation tool for native, hybrid and mobile web apps, tested on simulators (iOS, FirefoxOS), emulators (Android), and real devices (iOS, Android, FirefoxOS).</p>
+
+					<div class="head_image">
+						<span class="androidimage">
+							<img class="android_image" src="../images/appiumios.png">
+						</span>
+					</div>
+
+						<p>
+
+						<span class="header">Requirements:</span>
+
+							<span class="space">1)Mac OS X</span>
+							<span class="space">2)Xcode</span>
+							<span class="space">3)Appium</span>
+							<span class="space">4)Eclipse IDE</span>
+							<span class="space">5)Selenium and Appium Java Client JAR files</span>
+
+						<span class="header">IOS Setup Steps:</span>
+
+							<span class="space">1)Download Xcode from Apple App Store. After installing Xcode, download all its simulators</span>
+							<span class="space">2)Click on Xcode button at top left side of the screen</span>
+							<span class="space">3)Click the Preferences button</span>
+							<span class="space">4)Download all simulators from Downloads window</span>
+							<span class="space">5)Also Download Command lines tools from the downloads(If you don’t see the command line tools in the downloads, 
+								you can get it from here <a href="https://developer.apple.com/downloads/index.action">https://developer.apple.com/downloads/index.action</a></span>
+
+						<span class="header">Setup Bash-Profile:</span>
+
+							<span class="space">1)Open Terminal</span>
+							<span class="space">2)Enter $ vim .bash_profile</span>
+							<span class="space">3)Export ANDROID_HOME = (path to SDK folder)</span>
+							<span class="space">4)Export JAVA_HOME = SDK Path</span>
+							
+
+						<span class="header">Setup Appium server using APP:</span>
+							<span class="space">Download Appium program from: <a href="http://appium.io/">http://appium.io/</a> => Downloads => Appium.app for OS X =>appium-x.x.x.dmg</span>
+							<span class="space">Unpack Appium-x.x.x.dmg to Application folder.</span>							
+
+						<span class="header">If you use a simulator:</span></span>
+							<span class="space">1) Select a device and check the checkbox in front of <span class="lit">Force Device</span></span>
+							<span class="space">2) Select a <span class="lit">Platform Version</span></span>
+							<span class="space">3) Check the checkbox in from of “Show Simulator Log”</span>
+						<span class="header">If you use a Real Device:</span>
+							<span class="space">1) Select a checkbox in front of UDID</span>
+							<span class="space">2) In UDID field enter devices UDID (device UDID number could be opened in
+												iTunes/device page/Tap the <span class="lit">Serial number</span> field)</span>
+							<span class="space">3) Uncheck the <span class="lit">Force Device </span>checkbox if it is checked</span>
+							<span class="space">4) Launch the Appium app</span>
+							<span class="space">5) Verify if all settings are corrected by taping the “Doctor” button</span>
+							<span class="space">6) If all is correct tap the <span class="lit">Inspector</span> button to start recording the test.</span>
+							
+						<span class="header">Provisioning Profile for IOS</span>
+
+							<span class="space">1) A valid iOS Development Distribution Certificate and Provisioning Profile are necessary to test on a real device</span>
+							<span class="space">2) Create Appleid (<a href="https://appleid.apple.com/account">https://appleid.apple.com/account</a>)</span>
+							<span class="space">3) Create a Jira ticket under MDS project with Appleid and device UDID</span>
+							<span class="space">4) Once you got the approval, access below link (<a href="https://developer.apple.com/membercenter/index.action">https://developer.apple.com/membercenter/index.action</a>) to see the certificate</span>
+							<span class="space">5) Click on Certificates, Identifiers &amp; Profiles and then again click on Certificates link. 
+								You must see your name in the Certificates list</span>
+
+
+						<span class="header">Setup Appium server in Mac using Source Code:</span>
+
+							Open terminal and follow the below steps
+
+							<span class="header">Step 1: Install IOS-Webkit-debug-proxy</span>
+
+								<span class="space">1) Install Brew</span>
+								<span class="space">2) brew install node</span>
+								<span class="space">3) brew install ios-webkit-debug-proxy</span>
+
+							<span class="header">Step 2: Get Safari Launcher and build – To launch safari browser in real devices</span>
+
+								<span class="space">1) git clone <a href="https://github.com/budhash/SafariLauncher.git">https://github.com/budhash/SafariLauncher.git</a></span>
+								<span class="space">2) cd SafariLauncher</span>
+								<span class="space">3) sudo ./build.sh --=[path to your apple developer cert] --profile=[path to your provisioning profile]</span>
+								<span class="space">4) open SafariLauncher in xcode and develop to device</span>
+
+							<span class="header">Step 3: Trust device and run ios_webkit_debug_proxy</span>
+
+								<span class="space">1) connect device to Mac</span>
+								<span class="space">2) Open terminal and type below commands to check the device connectivity</span>
+								<span class="space">3) idevicepair pair</span>
+								<span class="space">4) idevicepair validate</span>
+								<span class="space">5) ios_webkit_debug_proxy -d -c UDID:27753</span>
+
+							<span class="header">Step 4: To create a profile for the launcher go into the Apple Developers Member Center and get identity code</span>
+
+								<span class="space">1) Create a new App Id and select the WildCard App ID option and set it to "*"</span>
+								<span class="space">2) Create a new Development Profile and for App Id select the one created in step 1.</span>
+								<span class="space">3) Select your certificate(s) and device(s) and click next.</span>
+								<span class="space">4) Set the profile name and generate the profile.</span>
+								<span class="space">5) Download the profile and open it with a Text Editor or any text editor.</span>
+								<span class="space">6) Search for the UUID and the string for it is your identity code.</span>
+
+							<span class="header">Step 5: Install and run appium server (To execute the scripts on real devices)</span>
+
+								<span class="space">1) git clone <a href="https://github.com/appium/appium.git">https://github.com/appium/appium.git</a></span>
+								<span class="space">2) cd appium</span>
+								<span class="space">3) ./reset.sh --code-sign=[path to your apple developer cert] --profile=[path to your provisioning profile]</span>
+								<span class="space">4) Copy SafariLauncher/build/Debug-iphoneos/SafariLauncher.zip from build in Step2  to
+								../appium/build/SafariLauncher/SafariLauncher.zip</span>
+								<span class="space">5) $ node ./lib/server/main.js -U UDID</span>
+								<span class="space">6) To execute the scripts on simulator, open terminal and  follow the below steps</span>
+									<span class="substeps">i) cd appium</span>
+									<span class="substeps">ii) Appium (this command will start the appium server)</span>
+
+							<span class="header">Step 6: Enable inspector on iOS device</span>
+							
+									Turn on web inspector on iOS device (settings > safari > advanced)
+
+								<span class="header">Appium Desired Capabilities for Real Devices: </span>
+									<pre class="lang-html">
+										<code>
+											<span class="space">DesiredCapabilities capabilitiesIOS = new DesiredCapabilities();</span>
+											<span class="space">capabilitiesIOS.setCapability("platformName", "iOS");</span>
+											<span class="space">capabilitiesIOS.setCapability("platformVersion", "7.0");</span>
+											<span class="space">capabilitiesIOS.setCapability("safariAllowPopups", false);</span>
+											<span class="space">capabilitiesIOS.setCapability("safariIgnoreFraudWarning", "true");</span>
+											<span class="space">//capabilitiesIOS.setCapability("deviceName", "iPad Air");</span>
+											<span class="space">//capabilitiesIOS.setCapability("deviceName", "iPhone Simulator");</span>
+											<span class="space">capabilitiesIOS.setCapability("deviceName", "UDID");</span>
+											<span class="space">capabilitiesIOS.setCapability("UDID", "UDID");</span>
+											<span class="space">capabilitiesIOS.setCapability("browserName", "Safari");</span>
+											<span class="space">try {</span>
+											<span class="space">	driver = new IOSDriver(new URL("http://localhost:4723/wd/hub"),	capabilitiesIOS);</span>
+											<span class="space">	} catch (Exception e) {</span>
+											<span class="space">	// TODO Auto-generated catch block</span>
+											<span class="space">	e.printStackTrace();</span>
+											<span class="space">	}</span>
+											<span class="space">}</span>
+										</code>
+									</pre>
+
+								<span class="header">Appium Desired Capabilities for IOS Simulators:</span>
+									<pre class="lang-html">
+										<code>
+											<span class="space">DesiredCapabilities capabilitiesIOS = new DesiredCapabilities();</span>
+											<span class="space">capabilitiesIOS.setCapability("platformName", "iOS");</span>
+											<span class="space">capabilitiesIOS.setCapability("platformVersion", "7.0");</span>
+											<span class="space">capabilitiesIOS.setCapability("safariAllowPopups", false);</span>
+											<span class="space">capabilitiesIOS.setCapability("safariIgnoreFraudWarning", "true");</span>
+											<span class="space">capabilitiesIOS.setCapability("deviceName", "iPhone Simulator");</span>
+											<span class="space">capabilitiesIOS.setCapability("browserName", "Safari");</span>
+											<span class="space">try {</span>
+											<span class="space">driver = new IOSDriver(new URL("http://localhost:4723/wd/hub"),</span>
+											<span class="space">capabilitiesIOS);</span>
+											<span class="space">} catch (Exception e) {</span>
+											<span class="space">// TODO Auto-generated catch block</span>
+											<span class="space">e.printStackTrace();</span>
+
+											<span class="space">}</span>
+
+											<span class="space">}</span>	
+										</code>
+									</pre>						
+						</p>					
+					</div>
+					<div class="row mt4">
+						<div class="group span1of2 large-span1of2">
+							<!-- <a class="more" href="#">Read More</a>	 -->					
+						</div>						
+					</div>
+				</article>	
+				<hr>				
+			</div>						
+
+		</div>
+
+		<nav class="span3of4 centered">	
+					<div class="col span1of2 large-span1of2 middle">
+						<a href="appiumandroid.html" class="btn-small">Older Posts</a>						
+					</div>		
+		</nav>	
+
+		<footer class="copyright">
+			<div class="content">
+				<a class="footer-logo" href="#"><img src="../images/Sig.png"></a>
+			</div>			
+		</footer>
+
+		<section class="hide_overflow" id="home">
+			<a class="go_btn" href="">
+				Test Automation Blog
+				<span class="hide_below_large">: Srihari Innamuri</span>
+			</a>	
+		</section>
+	</body>
+</html>
